@@ -1,5 +1,4 @@
 #dependancies
 /node_modules
-
-#keys
-/src/js/config.js
+#key
+.env

@@ -1,4 +1,3 @@
-import { key, key2 } from '../config';
 
 export default class Search {
     constructor(query){
@@ -6,6 +5,7 @@ export default class Search {
     }
 
 async getRecipes() {
+    const key = process.env.API_KEY;
     try {
         const number = 30;
         const url = `https://api.spoonacular.com/recipes/search?apiKey=${key}&query=${this.query}&number=${number}`
