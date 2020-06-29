@@ -30,7 +30,7 @@ export default class List {
     }
 
     increaseCount (id, newCount){
-        this.items.find(el => el.id === id).count = count + newCount;
+        this.items.find(el => el.id === id).count = Number(count) + Number(newCount);
     }
 
     deleteItem(id){
