@@ -40,42 +40,42 @@ const evaluateFraction = (fraction, int, retStr) => {
     }
 };
 
-const formatCount = count => {
-    if (count) {
-        const [int, dec] = count.toString().split(".").map(el => parseInt(el, 10));
-
-        if (!dec) return count;
-
-        if (int === 0) {
-            const fr = fraction(count);
-
-            return evaluateFraction(fr, int, `${fr.n}/${fr.d}`);
-        }
-        else {
-            const fr = fraction(count - int);
-
-            return evaluateFraction(fr, int, `${int} ${fr.n}/${fr.d}`);
-        }
-    }
-
-    return "?";
-};
-
 // const formatCount = count => {
 //     if (count) {
-//        let c = new Fraction(count)
-//         //console.log(c.denominator)
-//         if(c.denominator >= 100){
-//             c.numerator %= 4
-//             c.denominator = 4;
+//         const [int, dec] = count.toString().split(".").map(el => parseInt(el, 10));
+
+//         if (!dec) return count;
+
+//         if (int === 0) {
+//             const fr = fraction(count);
+
+//             return evaluateFraction(fr, int, `${fr.n}/${fr.d}`);
 //         }
-//         console.log(eval(c))
-//         return c
-        
-//         //return new Fraction(count);
+//         else {
+//             const fr = fraction(count - int);
+
+//             return evaluateFraction(fr, int, `${int} ${fr.n}/${fr.d}`);
+//         }
 //     }
-//     return '?';
-// }
+
+//     return "?";
+// };
+
+const formatCount = count => {
+    if (count) {
+       let c = new Fraction(count)
+        //console.log(c.denominator)
+        if(c.denominator >= 100){
+            c.numerator %= 4
+            c.denominator = 4;
+        }
+        console.log(eval(c))
+        return c
+        
+        //return new Fraction(count);
+    }
+    return '?';
+}
 
 const createIngredient = (ingredient) => {
     //console.log(ingredient.ingredient.length)

@@ -14,6 +14,7 @@ export default class List {
             ingredient
         }
         if(this.items.find(el => el.ingredient === item.ingredient)){
+            console.log(2);
             const index = this.items.findIndex(el => el.ingredient === item.ingredient)
             const updatedCount = Number(this.items[index].count) + Number(item.count);
             console.log(item.count)
@@ -30,6 +31,7 @@ export default class List {
     }
 
     increaseCount (id, newCount){
+        console.log(1);
         this.items.find(el => el.id === id).count = Number(count) + Number(newCount);
     }
 

@@ -117,7 +117,7 @@ export default class Recipe {
         this.ingredients.forEach(ingredient =>{
             //console.log(eval(ingredient.count))
             ingredient.count = ((newServings / this.servings) * ingredient.count).toFixed(1);
-
+            console.log("Update Servings");
         
             console.log(newServings / this.servings, ingredient.count);
             
