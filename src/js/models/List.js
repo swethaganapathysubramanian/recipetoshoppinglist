@@ -15,7 +15,7 @@ export default class List {
         }
         if(this.items.find(el => el.ingredient === item.ingredient)){
             const index = this.items.findIndex(el => el.ingredient === item.ingredient)
-            const updatedCount = this.items[index].count + item.count;
+            const updatedCount = Number(this.items[index].count) + Number(item.count);
             console.log(item.count)
             this.items[index].count = updatedCount
             const newItem = {
