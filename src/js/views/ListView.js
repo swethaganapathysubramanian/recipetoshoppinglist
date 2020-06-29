@@ -53,5 +53,6 @@ export const deleteItem = id => {
 
 export const updateCount = ({ id, count }) => {
     const item = document.getElementById(`${id}`);
+    console.log("this is called")
     item.value = count;
 }
