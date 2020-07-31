@@ -45,67 +45,6 @@ export default class Recipe {
                 ingredient: el.name
             }
             return objIng;
-            //remove units
-        // let ingredient = el.originalString.toLowerCase();
-        // unitsLong.forEach((unit, i) =>{
-        //     ingredient = ingredient.replace(unit, unitsShort[i]);
-        // })
-        //     //remove parentheses
-        // ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
-        // ingredient = ingredient.replace(/ *\*[^*]*\ */g, ' ');
-        //     //parse ing into count unit and ingredients
-        // const arrIng = ingredient.split(' ');
-        // //console.log(arrIng);
-        // const unitIndex = arrIng.findIndex(el2 => unitsShort.includes(el2));
-        //     //console.log(unitIndex);
-        // let objIng;
-        // if(unitIndex > -1){
-        //         // there is a unit
-        //     const arrCount = arrIng.slice(0, unitIndex);
-        //     //console.log(arrCount);
-            
-        //     let count;
-        //     if( arrCount.length === 1){
-        //         let integ = arrIng[0].replace('-','+')
-        //        // console.log(integ)
-        //         //console.log(parseInt(integ,10))
-        //         if(integ.includes('/')){
-        //             console.log(integ)
-        //         }
-        //         count = integ;
-                
-        //         //console.log(count);
-                   
-        //     } else {
-        //         let form = arrIng.slice(0, unitIndex).join('+');
-        //         //console.log(form);
-        //         count = eval(form);
-        //     }
-        //     objIng = {
-        //         count,
-        //         unit: arrIng[unitIndex],
-        //         ingredient: arrIng.slice(unitIndex + 1).join(' ') 
-        //     }
-        
-        // } else if (parseInt(arrIng[0],10)){
-        //     objIng = {
-        //         count: parseInt(arrIng[0], 10),
-        //         unit: '',
-        //         ingredient: arrIng.slice(1).join(' ')
-        //     }
-        // } else if (unitIndex === -1){
-        //         //no unit or no number in 1st position
-        //     objIng = {
-        //         count: 1,
-        //         unit: '',
-        //         ingredient
-        //     }  
-        // }
-
-        //     return objIng;
-        // });
-        //     //console.log(newIngredients);
-        // this.ingredients = newIngredients;
     });
         this.ingredients = newIngredients;
 }

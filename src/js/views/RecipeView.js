@@ -1,29 +1,9 @@
 import { elements } from './base';
-import { Fractional } from 'fractional';
 import { fraction } from "mathjs";
 export const clearRecipe = () => {
     elements.recipe.innerHTML = '';
 }
 
-// const formatCount = count => {
-//     if(count){
-//         const newCount = Math.round(count * 10000) / 10000;
-//         const [ int, dec ] = newCount.toString().split('.').map(el => parseInt(el, 10));
-//         if(!dec) return newCount;
-
-//         if (int === 0){
-//             const fr = new Fraction(newCount);
-//             fr.numerator = fr.numerator % 4;
-//             return `${fr.numerator}/4`;
-//         } else {
-//             const fr = new Fraction(newCount - int);
-//             fr.numerator = fr.numerator%4;
-//             return `${int} ${fr.numerator}/4`;
-//         }
-
-//     }
-//     return '?';
-// }
 
 const evaluateFraction = (fraction, int, retStr) => {
     // Is the fraction a whole integer? e.g. 1/1 = 1
@@ -61,21 +41,6 @@ const formatCount = count => {
     return "?";
 };
 
-// const formatCount = count => {
-//     if (count) {
-//        let c = new Fraction(count)
-//         //console.log(c.denominator)
-//         if(c.denominator >= 100){
-//             c.numerator %= 4
-//             c.denominator = 4;
-//         }
-//         console.log(eval(c))
-//         return c
-        
-//         //return new Fraction(count);
-//     }
-//     return '?';
-// }
 
 const createIngredient = (ingredient) => {
     //console.log(ingredient.ingredient.length)
@@ -97,12 +62,12 @@ const createIngredient = (ingredient) => {
 }
 export const renderRecipe = (recipe, isLiked) => {
     const markup = `
-     
+             <h1 class="recipe__title">
+                    <span>${recipe.title}</span>
+                </h1>             
             <figure class="recipe__fig">
                 <img src="${recipe.img}" alt="${recipe.title}" class="recipe__img">
-                <h1 class="recipe__title">
-                    <span>${recipe.title}</span>
-                </h1>
+               
             </figure>
             <div class="recipe__details">
                 <div class="recipe__info">

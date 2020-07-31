@@ -3,6 +3,7 @@ import Search from './models/Search';
 import Recipe from './models/Recipe';
 import List from './models/List';
 import Likes from './models/Likes';
+import XlsExport from 'xlsexport';
 import * as searchView from './views/SearchView';
 import * as recipeView from './views/RecipeView';
 import * as ListView from './views/ListView';
@@ -224,5 +225,13 @@ elements.recipe.addEventListener('click', e =>{
     //console.log(state.recipe);
 })
 
+elements.shopping.addEventListener('click', e => {
+    if (e.target.matches('.checkout *')) {
+        var listOfItems = state.list.items;
+        console.log(listOfItems);
+        const xls = new XlsExport(listOfItems,"Shopping List");
+        xls.exportToXLS('export.xls')
+    }
+})
 
 

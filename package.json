@@ -27,6 +27,7 @@
     "fractional": "^1.0.0",
     "mathjs": "^7.0.2",
     "regenerator-runtime": "^0.13.5",
-    "uniqid": "^5.2.0"
+    "uniqid": "^5.2.0",
+    "xlsexport": "^1.5.2"
   }
 }

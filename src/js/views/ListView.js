@@ -27,7 +27,7 @@ export const visibleButton = () => {
                     <svg class="search__icon">
                         <use href="img/icons.svg#icon-shopping-cart"></use>
                     </svg>
-                    <span>Checkout shopping list</span>
+                    <span>Export shopping list</span>
                 </button>
                 <br>
                 <br> </div>
